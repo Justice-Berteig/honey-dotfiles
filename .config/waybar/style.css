@@ -1,0 +1,175 @@
+/* ========================= */
+/* = Define Custom Colours = */
+/* ========================= */
+
+@define-color fg0 #1c120c;
+@define-color fg1 #2b2112;
+@define-color fg2 #3a3118;
+@define-color fg3 #48401f;
+@define-color fg4 #575025;
+@define-color fg5 #665f2b;
+@define-color bg0 #e7e4d8;
+@define-color bg1 #e5dcc6;
+@define-color bg2 #e3d4b5;
+@define-color bg3 #e1cba3;
+@define-color bg4 #dfc392;
+@define-color bg5 #ddbb80;
+@define-color bright_red #c74516;
+@define-color bright_yellow #cf9b19;
+@define-color bright_green #9ea318;
+@define-color bright_cyan #419c87;
+@define-color bright_blue #4789a8;
+@define-color bright_purple #b05aa0;
+@define-color dark_red #913226;
+@define-color dark_yellow #916d1c;
+@define-color dark_green #637311;
+@define-color dark_cyan #296b68;
+@define-color dark_blue #246082;
+@define-color dark_purple #823874;
+
+/* ======================== */
+/* = Set Universal Styles = */
+/* ======================== */
+
+* {
+  font-family: RecMonoLinear Nerd Font Propo, monospace;
+  font-size: 16px;
+}
+
+/* ========================================== */
+/* = Set Background Colour and Corner Radii = */
+/* ========================================== */
+
+window#waybar {
+  background-color: @bg0;
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* ========================= */
+/* = Generic Widget Styles = */
+/* ========================= */
+
+.modules-left {
+  margin-left: 24px;
+}
+.modules-right {
+  margin-right: 24px;
+}
+
+widget > *:not(#workspaces) {
+  padding: 0 16px;
+}
+
+/* ============== */
+/* = Workspaces = */
+/* ============== */
+
+#workspaces {
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: @fg3;
+
+  padding: 0 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+
+  border-width: 0px;
+  border-radius: 16px;
+
+  transition-property: padding;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0.3, 0.7, 1);
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  border: inherit;
+  border-color: transparent;
+  background: none;
+  transition: none;
+}
+
+#workspaces button.active {
+  padding: 0 14px;
+  background-color: @bright_green;
+  color: @fg0;
+}
+
+#workspaces button.urgent {
+  color: @bright_red;
+}
+
+/* ===================== */
+/* = Left Side Modules = */
+/* ===================== */
+
+#clock {
+  color: @dark_yellow;
+}
+
+#disk {
+  color: @bright_purple;
+}
+
+#memory {
+  color: @bright_purple;
+}
+
+#temperature {
+  color: @bright_yellow;
+}
+
+#temperature.critical {
+  color: @bright_red;
+}
+
+/* ====================== */
+/* = Right Side Modules = */
+/* ====================== */
+
+#pulseaudio {
+  color: @bright_cyan;
+}
+
+#pulseaudio.muted {
+  color: @dark_blue;
+}
+
+#backlight {
+  color: @bright_cyan;
+}
+
+#network {
+  color: @dark_green;
+}
+
+#network.disconnected {
+  color: @bright_red;
+}
+
+#battery {
+  color: @bright_blue;
+}
+
+#battery.charging, #battery.plugged {
+  color: @bright_green;
+}
+
+#battery.good:not(.charging) {
+  color: @bright_cyan;
+}
+
+#battery.warning:not(.charging) {
+  color: @bright_yellow;
+}
+
+#battery.critical:not(.charging) {
+  color: @bright_red;
+}
+
+

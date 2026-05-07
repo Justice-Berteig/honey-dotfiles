@@ -1,0 +1,109 @@
+{
+  "logo": {
+    "type": "kitty",
+    "source": "$(ls ~/.config/fastfetch/images/*.png | shuf -n 1)",
+    "height": 14,
+    "padding": {
+      "top": 1,
+      "left": 1,
+      "right": 1
+    }
+  },
+  "display": {
+    "disableLinewrap": true,
+    "separator": " ",
+    "color": {
+      "keys": "light_green"
+    },
+    "key": {
+      "type": "string"
+    },
+    "bar": {
+      "border": {
+	"left": "\uee00",
+	"leftElapsed": "\uee03",
+	"right": "\uee02",
+	"rightElapsed": "\uee05"
+      },
+      "char": {
+	"total": "\uee01",
+	"elapsed": "\uee04"
+      },
+      "color": {
+	"total": null
+      },
+      "width": 16
+    },
+    "percent": {
+      "type": ["num", "bar", "bar-monochrome"],
+      "color": {
+        "green": "light_green",
+	"yellow": "light_yellow",
+	"red": "light_red"
+      }
+    }
+  },
+  "modules": [
+    {
+      "key": "╭────────────╮",
+      "type": "custom"
+    },
+    {
+      "type": "title",
+      "format": "{#keys}│ {#bold_light_magenta} {user-name<8} {#keys}│"
+    },
+    {
+      "key": "├────────────┤",
+      "type": "custom"
+    },
+    {
+      "type": "cpu",
+      "key": "│{#light_red} 󰍛 CPU      {#keys}│",
+      "format": "{#light_red}{name}"
+    },
+    {
+      "type": "gpu",
+      "key": "│{#light_red} 󰾲 GPU      {#keys}│",
+      "format": "{#light_red}{name}"
+    },
+    {
+      "key": "│            │",
+      "type": "custom"
+    },
+    {
+      "type": "packages",
+      "key": "│{#light_yellow} 󰏖 Packages {#keys}│",
+      "format": "{#light_yellow}{pacman} (pacman)"
+    },
+    {
+      "key": "│            │",
+      "type": "custom"
+    },
+    {
+      "type": "disk",
+      "key": "│{#light_cyan} 󰉉 Disk     {#keys}│",
+      "format": "{size-percentage-bar} {size-percentage}"
+    },
+    {
+      "type": "memory",
+      "key": "│{#light_cyan}  RAM      {#keys}│",
+      "format": "{percentage-bar} {percentage}"
+    },
+    {
+      "type": "swap",
+      "key": "│{#light_cyan} 󰓡 Swap     {#keys}│",
+      "format": "{percentage-bar} {percentage}"
+    },
+    {
+      "key": "╰────────────╯",
+      "type": "custom"
+    },
+    "break",
+    {
+      "type": "colors",
+      "brightness": "light",
+      "symbol": "circle"
+    },
+    "break"
+  ]
+}
