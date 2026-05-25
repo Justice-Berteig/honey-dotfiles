@@ -96,7 +96,7 @@ local theme = lush(function(injected_functions)
     CursorLine     { bg=bg2 }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     Directory      { fg=bright_blue }, -- Directory names (and other special names in listings)
     DiffAdd        { fg=bg0, bg=bright_yellow }, -- Diff mode: Added line |diff.txt| (also the mini.statusline colour for visual mode)
-    DiffChange     { fg=bg0, bg=bright_cyan }, -- Diff mode: Changed line |diff.txt| (also the mini.statusline colour for insert mode)
+    DiffChange     { fg=bg0, bg=bright_red }, -- Diff mode: Changed line |diff.txt| (also the mini.statusline colour for insert mode)
     DiffDelete     { fg=bright_red, bg=dark_blue }, -- Diff mode: Deleted line |diff.txt|
     DiffText       { fg=bg0, bg=bright_purple }, -- Diff mode: Changed text within a changed line |diff.txt| (also the mini.statusline colour for command mode)
     EndOfBuffer    { fg=fg5 }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
@@ -119,7 +119,7 @@ local theme = lush(function(injected_functions)
     ModeMsg        { fg=bg0, bg=bright_cyan }, -- 'showmode' message (e.g., "-- INSERT -- ", or "recording @")
     MsgArea        { fg=dark_yellow }, -- Area for messages and cmdline
     MsgSeparator   { fg=bright_cyan }, -- Separator for scrolled messages, `msgsep` flag of 'display'
-    MoreMsg        { fg=bright_red, bg=dark_purple }, -- |more-prompt|
+    MoreMsg        { fg=bright_purple }, -- |more-prompt|
     NonText        { fg=bg2 }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     Normal         { fg=fg1 }, -- Normal text
     NormalFloat    { fg=fg1, bg=bg1 }, -- Normal text in floating windows.
