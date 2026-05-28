@@ -41,6 +41,10 @@
 /* ========================================== */
 
 window#waybar {
+  background-color: alpha(#000000, 0);
+}
+
+window#waybar > * {
   background-color: @bg0;
 
   border-bottom-left-radius: 15px;
