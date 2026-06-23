@@ -1,4 +1,6 @@
 Arch Linux rice for my honey <3
+![Wallpaper screenshot](/screenshots/screenshot1.png?raw=true)
+![Terminal screenshot](/screenshots/screenshot2.png?raw=true)
 
 # Setup
 
