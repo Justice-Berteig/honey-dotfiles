@@ -38,8 +38,8 @@ hl.bind(mainMod .. " + down" , hl.dsp.focus({ direction = "down"  }))
 
 hl.bind(mainMod .. " + H"    , hl.dsp.focus({ direction = "left"  }))
 hl.bind(mainMod .. " + L"    , hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + J"    , hl.dsp.focus({ direction = "up"    }))
-hl.bind(mainMod .. " + K"    , hl.dsp.focus({ direction = "down"  }))
+hl.bind(mainMod .. " + K"    , hl.dsp.focus({ direction = "up"    }))
+hl.bind(mainMod .. " + J"    , hl.dsp.focus({ direction = "down"  }))
 
 -- Move windows
 hl.bind(mainMod .. " + SHIFT + left" , hl.dsp.window.move({ direction = "left"  }))
@@ -49,19 +49,19 @@ hl.bind(mainMod .. " + SHIFT + down" , hl.dsp.window.move({ direction = "down"  
 
 hl.bind(mainMod .. " + SHIFT + H"    , hl.dsp.window.move({ direction = "left"  }))
 hl.bind(mainMod .. " + SHIFT + L"    , hl.dsp.window.move({ direction = "right" }))
-hl.bind(mainMod .. " + SHIFT + J"    , hl.dsp.window.move({ direction = "up"    }))
-hl.bind(mainMod .. " + SHIFT + K"    , hl.dsp.window.move({ direction = "down"  }))
+hl.bind(mainMod .. " + SHIFT + K"    , hl.dsp.window.move({ direction = "up"    }))
+hl.bind(mainMod .. " + SHIFT + J"    , hl.dsp.window.move({ direction = "down"  }))
 
 -- Resize windows
-hl.bind(mainMod .. " + ALT + left" , hl.dsp.window.resize({ x=-48, y=0   }))
-hl.bind(mainMod .. " + ALT + right", hl.dsp.window.resize({ x= 48, y=0   }))
-hl.bind(mainMod .. " + ALT + up"   , hl.dsp.window.resize({ x=0  , y=-48 }))
-hl.bind(mainMod .. " + ALT + down" , hl.dsp.window.resize({ x=0  , y= 48 }))
+hl.bind(mainMod .. " + ALT + left" , hl.dsp.window.resize({ x=-48, y=0   , relative=true }))
+hl.bind(mainMod .. " + ALT + right", hl.dsp.window.resize({ x= 48, y=0   , relative=true }))
+hl.bind(mainMod .. " + ALT + up"   , hl.dsp.window.resize({ x=0  , y=-48 , relative=true }))
+hl.bind(mainMod .. " + ALT + down" , hl.dsp.window.resize({ x=0  , y= 48 , relative=true }))
 
-hl.bind(mainMod .. " + ALT + H"    , hl.dsp.window.resize({ x=-48, y=0   }))
-hl.bind(mainMod .. " + ALT + J"    , hl.dsp.window.resize({ x= 48, y=0   }))
-hl.bind(mainMod .. " + ALT + K"    , hl.dsp.window.resize({ x=0  , y=-48 }))
-hl.bind(mainMod .. " + ALT + L"    , hl.dsp.window.resize({ x=0  , y= 48 }))
+hl.bind(mainMod .. " + ALT + H"    , hl.dsp.window.resize({ x=-48, y=0   , relative=true }))
+hl.bind(mainMod .. " + ALT + L"    , hl.dsp.window.resize({ x= 48, y=0   , relative=true }))
+hl.bind(mainMod .. " + ALT + K"    , hl.dsp.window.resize({ x=0  , y=-48 , relative=true }))
+hl.bind(mainMod .. " + ALT + J"    , hl.dsp.window.resize({ x=0  , y= 48 , relative=true }))
 
 -- Switch and move workspaces
 for i = 1, 10 do
