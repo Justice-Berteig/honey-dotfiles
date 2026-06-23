@@ -12,7 +12,7 @@ hl.bind(mainMod .. " + SPACE" , hl.dsp.exec_cmd(LAUNCHER))
 
 -- Core functionality
 hl.bind(mainMod .. " + Q"        , hl.dsp.window.close())
-hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch \"hl.dsp.exit()\""))
 hl.bind(mainMod .. " + V"        , hl.dsp.window.float(     { action = "toggle" }))
 hl.bind(mainMod .. " + F"        , hl.dsp.window.fullscreen({ mode="fullscreen", action = "toggle" }))
 hl.bind(mainMod .. " + P"        , hl.dsp.window.pin(       { action = "toggle" }))
@@ -21,7 +21,7 @@ hl.bind(mainMod .. " + P"        , hl.dsp.window.pin(       { action = "toggle" 
 hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"))
 
 -- Screenshot
-hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("grim -g '$(slurp -d)' - | wl-copy"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd("grim -g \"$(slurp -d)\" - | wl-copy"))
 
 -- Notifications
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd(NOTIFICATION_CENTER))
